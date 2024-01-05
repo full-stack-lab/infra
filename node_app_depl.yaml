@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-app-depl
+  labels:
+    app: node_app
+spec:
+  replicas: 1
+  selector:
+    matchLabels: 
+      app: node_app
+  template:
+    metadata:
+      labels:
+        app: node_app
+    spec: 
+      containers:
+      - name: node-app-con
+        image: 01628229754/image-service:test1
+        ports:
+        - containerPort: 3003
+        env:
+          - name: PORT
+            value: "3000"
+          - name: NODE_ENV
+            value: "production"
+          - name: DB_URL
+            value: "10.10.171.3:27017"
+          - name: DB_NAME
+            value: "db_test"
+          - name: DB_USERNAME
+            value: "root"
+          - name: DB_PASSWORD
+            value: "123456"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-app-service
+spec:
+  selector:
+    app: node_app
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 3003
+      targetPort: 3003
+      nodePort: 31039
