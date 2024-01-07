@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
       - name: message-service-img
-        image: 01628229754/message-service:1.0
+        image: 01628229754/message-service:63e677e81eaa97a37fdaa6b2f467fd0ca45c286c
         ports:
         - containerPort: 8089
         env:
