@@ -1,0 +1,13 @@
+apiVertion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: root-ingress
+  namespace: default
+spec:
+  rules:
+  - host: lab2.com
+    http:
+      paths:
+      - backend:
+        serviceName: front-end-service
+        servicePort: 5173
