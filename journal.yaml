@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
       - name: journal-service-img
-        image: 01628229754/journal-service:2bb8eed2fb07928d740a506d4dbdae4e4e595740
+        image: 01628229754/journal-service:dc007cb5ec7d4c74d9e63c6cdbdc5708cda16337
         ports:
         - containerPort: 8088
         env:
