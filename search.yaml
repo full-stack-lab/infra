@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
       - name: search-service-img
-        image: 01628229754/search-service:365430147cea9ed30003b95ffe7ca29dcf1154c4
+        image: 01628229754/search-service:1fcaf7262a94fc0ce9156523d5dbfa68f6d04a3f
         ports:
         - containerPort: 8080
         env:
