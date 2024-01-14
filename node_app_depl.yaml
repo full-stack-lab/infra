@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
       - name: node-app-con
-        image: 01628229754/image-service:c735d810ae28101a56e8b53764bd2b20aaab2d64
+        image: 01628229754/image-service:e5d858b3e45af6f1b4aa0285fd02e275ef4f834c
         ports:
         - containerPort: 3003
         env:
