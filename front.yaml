@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
       - name: front-end-img
-        image: 01628229754/frontend:bcbc924e426469562e65b30d196cff3f228d42d9
+        image: 01628229754/frontend:3c90dbb2d758b7e4f7fa707880499871d6880922
         ports:
         - containerPort: 5173
 ---
